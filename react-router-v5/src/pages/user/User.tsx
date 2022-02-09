@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, useRouteMatch } from 'react-router-dom';
+import { Link, Route, useParams, useRouteMatch } from 'react-router-dom';
 import About from './About';
 import Main from './Main';
 
@@ -7,8 +7,9 @@ type UserProps = {
   id: string;
 };
 
-const User = ({ id }: UserProps) => {
+const User = () => {
   const match = useRouteMatch();
+  const { id } = useParams<UserProps>();
 
   return (
     <>

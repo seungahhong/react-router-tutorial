@@ -27,13 +27,18 @@ const Template = ({ children }: TemplateProps) => {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/with/1" activeStyle={activeStyle}>
+            User Params with router
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/users/1" activeStyle={activeStyle}>
-            User Params render
+            User Params hooks
           </NavLink>
         </li>
         <li>
           <NavLink to="/item/2" activeStyle={activeStyle}>
-            User Params hooks
+            User Params render
           </NavLink>
         </li>
         <li>

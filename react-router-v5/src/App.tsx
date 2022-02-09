@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import User from './pages/user/User';
 import Item from './pages/Item';
+import WithRouter from './pages/WithRouter';
 import Optional from './pages/Optional';
 
 function App() {
@@ -14,11 +15,16 @@ function App() {
         <Route path="/about">
           <About />
         </Route>
+        <Route path="/users/:id">
+          <User />
+        </Route>
+        <Route path="/with/:id">
+          <WithRouter />
+        </Route>
         <Route
-          path="/users/:id"
-          render={({ match }) => <User id={match.params.id} />}
+          path="/item/:id"
+          render={({ match }) => <Item id={match.params.id} />}
         />
-        <Route path="/item/:id" component={Item} />
         <Route path="/optional/:value?" component={Optional} />
         <Route exact path="/" component={Home} />
       </Switch>
