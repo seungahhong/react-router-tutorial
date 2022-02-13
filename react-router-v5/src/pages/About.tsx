@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Prompt, useLocation } from 'react-router-dom';
 
 const About = () => {
   const location = useLocation();
@@ -8,6 +8,7 @@ const About = () => {
     <>
       <h1>About</h1>
       <p>{location.search}</p>
+      <Prompt when={true} message="페이지를 떠나시겠습니까?" />
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Route, useParams, useRouteMatch } from 'react-router-dom';
-import About from './About';
-import Main from './Main';
+import UserAbout from './About';
+import UserMain from './Main';
 
 type UserProps = {
   id: string;
@@ -23,10 +23,10 @@ const User = () => {
         </li>
       </ul>
       <Route path={match.path} exact>
-        <Main />
+        <UserMain />
       </Route>
       <Route path={`${match.path}/about`} exact>
-        <About />
+        <UserAbout />
       </Route>
     </>
   );

@@ -6,7 +6,7 @@ type OptionalProps = {
 };
 
 const Optional = () => {
-  const { value }: OptionalProps = useParams();
+  const { value } = useParams<OptionalProps>();
 
   return <h1>{`Optional ${value ? value : ''}`}</h1>;
 };

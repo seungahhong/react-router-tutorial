@@ -32,7 +32,7 @@ const Template = ({ children }: TemplateProps) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/users/1" activeStyle={activeStyle}>
+          <NavLink to="/user/1" activeStyle={activeStyle}>
             User Params hooks
           </NavLink>
         </li>
@@ -49,6 +49,11 @@ const Template = ({ children }: TemplateProps) => {
         <li>
           <NavLink to="/optional/3" activeStyle={activeStyle}>
             Optional params
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/main" activeStyle={activeStyle}>
+            redirect from main to usermain
           </NavLink>
         </li>
       </ul>

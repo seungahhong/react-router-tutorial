@@ -1,42 +1,44 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 
 const Navigation = () => {
-  const history = useHistory();
+  const navigation = useNavigate();
 
   return (
     <div>
       <button
         onClick={() => {
-          history.push('/');
+          navigation('/');
         }}
       >
         Home
       </button>
       <button
         onClick={() => {
-          history.goBack();
+          navigation(-1);
         }}
       >
         Go -1
       </button>
       <button
         onClick={() => {
-          history.go(-2);
+          navigation(-2);
         }}
       >
         Go -2
       </button>
       <button
         onClick={() => {
-          history.push('/about');
+          navigation('/about');
         }}
       >
         Go to about
       </button>
       <button
         onClick={() => {
-          history.replace('Item/2');
+          navigation('Item/2', {
+            replace: true,
+          });
         }}
       >
         Replace to Item
