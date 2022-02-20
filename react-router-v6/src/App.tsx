@@ -15,11 +15,14 @@ import UserMain from './pages/user/Main';
 import UserAbout from './pages/user/About';
 import Optional from './pages/Optional';
 import Template from './pages/Template';
+import history from './utils/history';
 
 function App() {
-  const navigation = useContext(NavigationContext).navigator as BrowserHistory;
+  // const navigation = useContext(NavigationContext).navigator as BrowserHistory;
+
   useEffect(() => {
-    const unlisten = navigation.listen(({ location, action }) => {
+    // const unlisten = navigation.listen(({ location, action }) => {
+    const unlisten = history.listen(({ location, action }) => {
       console.log(location);
       console.log(action);
       return () => {
